@@ -271,11 +271,10 @@ Before finalizing:
 - validate all report tables, diagram legibility, file paths, links and generated document opening;
 - stop broad exploration when every primary hypothesis has a supported answer or explicit unresolved status and further searches are unlikely to change the conclusion.
 
-### A10. Matiks case-study lessons (generalizable)
+### A10. Cross-framework mobile-analysis lessons
 
-The Matiks 1.49.0 analysis reinforced these practices:
-- a Hermes bundle can be very large and decompilation may be incomplete; use targeted searches and native-code corroboration;
-- custom React Native packages may be registered in smali even when the application bootstrap source is absent from JADX;
-- remote client configuration can override hardcoded defaults, so report both provenance and timestamp;
-- contact synchronization should be traced from Android provider through local pending storage, GraphQL serialization, authorization, response handling and retries;
-- static code establishes implemented capability, not successful runtime execution or backend retention.
+- Large JavaScript or bytecode bundles may decompile incompletely; use targeted searches and corroborate findings with native code and resource/configuration evidence.
+- Native bridge packages may be registered in platform-level code even when the framework bootstrap source is not recovered by the primary decompiler.
+- Remote client configuration can override compiled defaults; record the source, retrieval time and version of each configuration snapshot.
+- For personal-data synchronization, trace the full path from platform data provider through local staging, serialization, authorization, request execution, response handling and retries.
+- Static code establishes an implemented capability or code path, not successful runtime execution, server receipt or backend retention.
